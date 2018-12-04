@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Skill } from '../models/skill';
-import { Level } from '../types/level.enum';
+import { SkillsService } from '../services/skills.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,27 +9,15 @@ import { Level } from '../types/level.enum';
 })
 export class SkillsComponent implements OnInit {
 
-  skills: Skill[] = [
-    {
-      id: 0,
-      name: 'Abstract Mathematics',
-      level: Level.Expert
-    },
-    {
-      id: 1,
-      name: 'Philosophy',
-      level: Level.Advanced
-    },
-    {
-      id: 2,
-      name: 'Developing Software',
-      level: Level.Expert
-    }
-  ];
+  skills: Skill[];
+  dataService: SkillsService;
 
-  constructor() { }
+  constructor(private skillsService: SkillsService) {
+    this.dataService = this.skillsService;
+  }
 
   ngOnInit() {
+    this.skills = this.dataService.skills;
   }
 
 }

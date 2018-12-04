@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SkillsComponent } from './skills/skills.component';
+import { SkillsService } from './services/skills.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { SkillsComponent } from './skills/skills.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [SkillsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

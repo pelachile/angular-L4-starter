@@ -1,0 +1,11 @@
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+app-skills {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',
+  Geneva, Verdana, sans-serif;
+}
+
+
